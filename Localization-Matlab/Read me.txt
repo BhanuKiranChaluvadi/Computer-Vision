@@ -1,0 +1,25 @@
+1. convert_image_format.m  
+	converts images in a given folder from one format to another format, place the converted images in the desire
+	folder and can label them in chronilocal order.
+
+2. resize_images.m
+	resize all the images in a given to the desired size.
+	Resizing can help if you want to reduce the keypoint generated from an image. Which will make visualSFM and 
+	vocab tree run faster. which can immensle help to quicly check you code for errors and quality of video
+	before spending half day on visualSFM and vocab tree.
+
+3. list_files.m
+    list all the files of desired formated in a given folder.
+	Having text file containing all the files in the folder will drasticaly reduce the work load on Matlab.
+	Matlab can read each line and process the image rather than loading all the images at once and processing each.
+
+4. change_listed_names.m
+	can rename the text present in list file generated from list_files.m.
+	eg: 10.jpg to 10.key or 10.png
+	
+5. wrapper.m ----> present in siftDemoV4_David LOWE
+	Shift demo takes in one image in PGM format and will generate key file. 
+	So a small wrapper function written on top of Shift Demo. So it input each file in a given folder to siftDemoV4_David
+	and the generated key file is stored in the desired folder with out overwrittign the previous one.
+	
+6. The original sift.m take in pgm images. A small modification is done to original sift.m  to handle jpg or other formats.
